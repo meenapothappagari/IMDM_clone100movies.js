@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>IMDB clone</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+
+        }
+
+        .header {
+            background-color: rgb(19, 25, 33);
+            height: 69px;
+            color: rgb(250, 248, 248);
+        }
+
+        .container {
+            width: 98%;
+            height: 100%;
+            margin: auto;
+        }
+
+        .container-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-icon {
+            margin-left: 35px;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+
+        .all {
+            margin-left: 105px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            height: 40px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .all:hover {
+            outline: 2px solid orange;
+        }
+
+        .choose-one {
+            width: 50px;
+            border: none;
+            background-color: darkgrey;
+        }
+
+        .choose-one:hover {
+            background-color: rgb(102, 120, 120);
+            color: white;
+        }
+
+        .search-input {
+            width: 97%;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .search-icon {
+            width: 50px;
+            background-color: rgb(236, 170, 48);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .imdb {
+            margin-left: 30px;
+        }
+
+        .imdb:hover {
+            background-color: darkslategrey;
+        }
+
+        .imdb p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .border-white {
+            border: 1.5px solid transparent;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .border-white:hover {
+            border: 1.5px solid white;
+        }
+
+        .english {
+            background-color: rgb(19, 25, 33);
+            border: none;
+            color: white;
+        }
+
+        .bgrd-img img {
+            width: 100%;
+        }
+
+        main {
+            background-color: rgb(14, 15, 15);
+        }
+
+        .video {
+            position: absolute;
+            width: 70%;
+            height: 60%;
+            object-fit: cover;
+            margin-top: -213px;
+            margin-right: 290px;
+        }
+
+        .header1 {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .today-btn {
+            padding: 10px 10px;
+            font-size: 40px;
+            margin-top: -190px;
+            margin-left: 530px;
+            position: absolute;
+            color: orange;
+            background-color: rgb(110, 108, 108);
+
+        }
+
+        .watch-list {
+            color: yellow;
+            margin-top: -180px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 40px;
+
+        }
+
+        .btn {
+            text-align: center;
+            margin-right: 80px;
+            height: 40px;
+            width: 200px;
+            border: none;
+            background-color: rgb(14, 15, 15);
+            color: rgb(25, 99, 235);
+
+        }
+
+        .btn:hover {
+            background-color: rgb(2, 19, 29);
+        }
+
+        .movie1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 250px;
+            margin: 10px;
+            padding: 10px;
+            background-color: gray;
+        }
+
+        .movie1 img {
+            width: 100%;
+            height: 250px;
+        }
+
+        .movie1 h1 {
+            color: white;
+            font-size: 17px;
+
+        }
+
+        .movie1 button {
+            background-color: aquamarine;
+        }
+        .main{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container container-header">
+            <i class="fa fa-imdb" style="font-size: 50px; width:50px;color:yellow"></i>
+            <div class="menu-icon border-white">
+                <i class="fa fa-bars" style="font-size: 30px; color:aliceblue; "></i>
+                <!-- <p class="hello"> Menu </p> -->
+            </div>
+            <p>Menu</p>
+
+            <div class="all">
+                <select class="choose-one">
+                    <option> All</option>
+                    <option> About</option>
+                    <option> some</option>
+                    <option> category</option>
+                </select>
+                <input type="text" class="search-input" placeholder="search here...">
+                <div class="search-icon">
+                    <i class="fa fa-search" style="font-size:21px; width:50px; color:rgb(248, 247, 247)"></i>
+                </div>
+            </div>
+
+            <div class="imdb border-white">
+                <p>IMDB Pro</p>
+            </div>
+
+            <div class="imdb border-white">
+                <p>Watch list</p>
+            </div>
+
+            <div class="imdb border-white">
+                <p>Sign in</p>
+            </div>
+
+            <div class="imdb border-white">
+                <select class="english">
+                    <option>English</option>
+                </select>
+            </div>
+    </header>
+    <main>
+        <div class="bgrd-img">
+            <img src="https://m.media-amazon.com/images/I/61QY08uZyOL.jpg" alt="">
+        </div>
+        <div class="header1">
+
+            <video class="video" controls muted autoplay loop
+                src="https://media.istockphoto.com/id/1500897075/video/trailer-of-gangster-movie-on-streaming-service-app.mp4?s=mp4-640x640-is&k=20&c=86pU2edfgWf9ndJTDmj1gFC_aJmQT2O5wD0Myy958Z4="></video>
+
+            <button class="today-btn">
+                <i class="fa fa-angle-left"></i>
+            </button>
+            <button class="today-btn">
+                <i class="fa fa-angle-right"></i>
+            </button>
+            
+        </div>
+
+        <div class="watch-list">
+            <h1>Watch list</h1>
+            <button class="btn">Get more Recommendation <span>></span></button>
+        </div>
+
+        <div class="choise"></div>
+        <div class="main">
+            <div class="movie1">
+                <img src="https://th.bing.com/th?id=OIP.xuBZu9qoICmjYhflYXT0cQHaLH&w=204&h=306&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
+                    alt="">
+                <!-- <button onclick="showData"> Show data</button> -->
+                <h1>Rating</h1>
+                <h1>movie name</h1>
+                <button id="watch">Watch</button>
+                <button> Show data</button>
+            </div>
+        </div>
+
+        <button onclick="showdata()"> Show data</button>
+
+    </main>
+</body>
+<script src="imdbclone.js">
+
+
+
+    //let films = JSON.parse(localStorage.getItem("films"));
+    // Retrieve data from localStorage with key "data"
+    //let parsed_films = (JSON.parse(films))
+
+    //let lenght = parsed_films.length
+
+    //for (i = 0; i < length; i++) {
+       // console.log(parsed_films[i].image)
+        //console.log(parsed_films[i].rating)
+        //console.log(parsed_films[i].title)
+
+    //}
+
+
+
+</script>
+
+</html>
